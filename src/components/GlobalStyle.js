@@ -12,7 +12,10 @@ body {
     background-color: #E6E6FA;
     
   }
-  
+  h1 {
+   font-family: FANTASY;
+   font-size: 50px;
+  }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;

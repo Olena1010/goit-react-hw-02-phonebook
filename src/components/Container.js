@@ -16,4 +16,6 @@ export const Container = styled.div`
   & h1 {
     margin-bottom: 20px;
   }
+  font-size: 20px;
+  font-family: MONOSPACE;
 `;

@@ -22,34 +22,39 @@ const BookSchema = Yup.object().shape({
 });
 
 export const BookForm = ({ onAddContact }) => {
-    return
-<Formik
-  initialValues={{
-    name: '',
-    number: '',
-  }}
-  validationSchema={BookSchema}
-  onSubmit={(values, actions) => {
-    onAddContact({ ...values, id: nanoid() });
-    actions.resetForm();
-  }}
->
-  <Form>
-    <FormField>
-      Name
-      <Field name="name" placeholder="Enter the name of the contact" />
-      <ErrorMessage name="name" component="div" />
-    </FormField>
-    <FormField>
-      Number
-      <Field name="number" placeholder="Enter the contact's phone number" />
-      <ErrorMessage name="number" component="div" />
-    </FormField>
-    <SubmitButton type="submit">Add contact</SubmitButton>
-  </Form>
-</Formik>;
+  return (
+    <Formik
+      initialValues={{
+        name: '',
+        number: '',
+      }}
+      validationSchema={BookSchema}
+      onSubmit={(values, actions) => {
+        onAddContact({ ...values, id: nanoid() });
+        actions.resetForm();
+      }}
+    >
+      <Form>
+        <FormField>
+          Name
+          <Field name="name" placeholder="Enter the name of the contact" />
+          <ErrorMessage name="name" component="div" />
+        </FormField>
+        <FormField>
+          Number
+          <Field
+            name="number"
+            placeholder="Enter the contact's phone number"
+            type="tel"
+          />
+          <ErrorMessage name="number" component="div" />
+        </FormField>
+        <SubmitButton type="submit">Add contact</SubmitButton>
+      </Form>
+    </Formik>
+  );
 };
 
-BookForm.propTypes = {
+BookForm.protoType = {
   onAddContact: PropTypes.func.isRequired,
 };
