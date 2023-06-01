@@ -10,7 +10,16 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #E6E6FA;
-    
+      background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(https://img.freepik.com/free-vector/beautiful-watercolor-background_23-2148486848.jpg?w=2000),
+    linear-gradient(90deg,#E6E6FA,#E6E6FA);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
   }
   h1 {
    font-family: FANTASY;
